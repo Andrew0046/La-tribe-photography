@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery - La tribe photography</title>
+    <style>
+        /* Basic page styling */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        /* Re-used Header Styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 10;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Main Content & Photo Gallery Styling */
+        main {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem; /* Adjusted margin */
+            border-bottom: 1px solid #444;
+            padding-bottom: 1rem;
+        }
+
+        /* Back Button Styling */
+        .back-button-container {
+            text-align: center;
+            margin-bottom: 2rem; /* Space between button and photos */
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 10px 25px;
+            color: #cccccc;
+            border: 1px solid #cccccc;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        .photo-grid {
+            display: grid;
+            /* This creates a responsive grid that wraps automatically */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the space without distortion */
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .photo-item img:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+
+        /* Re-used Footer Styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 10;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* UPDATED FOOTER TO MATCH next-page.html */
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px; /* Space between text and button */
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #cccccc;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        
+        .footer-button {
+            display: inline-block;
+            padding: 5px 15px;
+            color: #cccccc;
+            border: 1px solid #cccccc;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .footer-button:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        /* Responsive Design */
+         @media (max-width: 768px) {
+            header h1, .gallery-title {
+                font-size: 2rem;
+            }
+         }
+
+         @media (max-width: 500px) {
+            .footer-content {
+                flex-direction: column; /* Stack footer items vertically */
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>La tribe photography</h1>
+    </header>
+
+    <main>
+        <h2 class="gallery-title">Travel</h2>
+        
+        <div class="back-button-container">
+            <a href="next-page.html" class="back-button">← Back to Galleries</a>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item"><img src="travel-thumbnail.jpg" alt="Description of travel photo 1"></div>
+            <div class="photo-item"><img src="https://placehold.co/600x400/222/fff?text=Your+Image" alt="Description of travel photo 2"></div>
+            <div class="photo-item"><img src="https://placehold.co/600x400/222/fff?text=Your+Image" alt="Description of travel photo 3"></div>
+            <div class="photo-item"><img src="https://placehold.co/600x400/222/fff?text=Your+Image" alt="Description of travel photo 4"></div>
+            <div class="photo-item"><img src="https://placehold.co/600x400/222/fff?text=Your+Image" alt="Description of travel photo 5"></div>
+            <div class="photo-item"><img src="https://placehold.co/600x400/222/fff?text=Your+Image" alt="Description of travel photo 6"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2021 by Pyramid Photography</p>
+            <a href="about.html" class="footer-button">About Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>
